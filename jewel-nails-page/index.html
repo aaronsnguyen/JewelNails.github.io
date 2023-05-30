@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="img/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jewel Nails Minnetonka</title>
+    <link rel="stylesheet" href="css/style.css">  
+  </head>
+  <body>
+    <!--Slide Show Banner-->
+    <div class = "slide-container">
+      <div class="slidesBanner transition">
+        <img src="img/slide2.png" alt="interior"/>
+      </div>
+      <div class="slidesBanner transition">
+        <img src="img/slide1.png" alt="interior"/>
+      </div>
+      <div class="slidesBanner transition">
+        <img src="img/slide3.png" alt="interior"/>
+      </div>
+      <div class="slidesBanner transition">
+        <img src="img/slide4.png" alt="interior"/>
+      </div>
+      <a id="previous" onclick="nextSlide(-1,0)">&#10094;</a>
+      <a id="next" onclick="nextSlide(1,0)">&#10095;</a>
+
+      <div class="announcements">
+      
+      </div>
+      <div class="slogan">
+        <p>Your Nails Will Shine Like Jewels</p>
+      </div>
+
+      <div class="dot-Container" style="text-align: center;">
+        <span class="dotSlide" onclick="dotSlideCurrent(1,0)"></span>
+        <span class="dotSlide" onclick="dotSlideCurrent(2,0)"></span>
+        <span class="dotSlide" onclick="dotSlideCurrent(3,0)"></span>
+        <span class="dotSlide" onclick="dotSlideCurrent(4,0)"></span>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/slide-show.js"></script>
+    
+    <!-- Navigation -->
+    <header> 
+      <nav>
+        <div class = "navBar"> 
+          <ul>
+            <li class="contacts"><a href="#">Contacts</a></li>
+            <li class="gallery"><a href="#">Gallery</a></li>
+            <li class="services"><a href="#serviceSection">Services</a></li> 
+            <li class="about"><a href="#aboutSection">About Us</a></li>
+            <li class="home activePage"><a href="index.html">Home</a></li>
+            <p class="storeName">Jewel Nails</p>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!--About Us Tab-->
+    <section id="aboutSection">
+      <div id="aboutUs">
+        <div class="sectionHeader">
+        <h2>About Us</h2> 
+
+        <!--Add a seperater-->
+        </div>
+
+        <div class="information">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+            labore et dolore magna aliqua. Vestibulum lectus mauris ultrices eros in cursus turpis massa 
+            tincidunt. Etiam non quam lacus suspendisse faucibus interdum posuere lorem. Diam
+          </p>
+        </div>
+        <a id="readMoreAbout" href="#">Read More</a>
+        <div class="rows">
+          <div class="columns">
+            <img id="colImg1" src="img/Logo.jpeg" alt="Fill In">
+            <h3 class="aboutHeader">Subtitle</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+              labore et dolore magna aliqua.
+            </p>
+          </div>
+          <div class="columns">
+            <img id="colImg2" src="img/Logo.jpeg" alt="Fill In">
+            <h3 class="aboutHeader">Subtitle</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+              labore et dolore magna aliqua.
+            </p>
+          </div>
+          <div class="columns">
+            <img id="colImg3" src="img/Logo.jpeg" alt="Fill In">
+            <h3 class="aboutHeader">Subtitle</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+              labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Services-->
+    <div class="service-wrapper">
+      <section id="serviceSection">
+        <div class="sectionHeader">
+          <h2>Our Services</h2>
+
+          <!--Add a seperater-->
+        </div>
+
+        <div class="information">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+            labore et dolore magna aliqua. Vestibulum lectus mauris ultrices eros in cursus turpis massa 
+            tincidunt. Etiam non quam lacus suspendisse faucibus interdum posuere lorem. Diam
+          </p>
+          <a id="readMoreService" href="#">View More</a>
+        </div>
+      </div>
+      
+    </section>
+  </body>
+</html>

@@ -1,0 +1,390 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0; 
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html, 
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture, 
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+    /*Color*/
+    --primary-color: whitesmoke;
+    --secondary-color: #D4Af37; /*Change this to a darker color maybe (more brown)*/
+    --accent-primary-color: black;
+    --accent-secondary-color: #1645ac;
+    --accent-third-color: #d3d3d3;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--scroll-padding, 70px);
+}
+
+body {
+    background-color: var(--primary-color);
+    height: 3000px;
+}
+
+/*Slide Show Banner*/
+.slogan { /*NEED WORK IF WE SHOULD DO A SLOGAN*/
+    color: var(--primary-color);
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+* {box-sizing: border-box}
+
+.slide-Container { /*NEED WORK IF WE SHOULD DO A SLOGAN*/
+	width: 100%;
+    height: 800px;
+	position: relative; 
+}
+
+.slidesBanner img { /*NEED WORK IF WE SHOULD DO A SLOGAN*/
+    object-fit:cover; 
+    width:100%; 
+    height: 500px;
+}
+
+.slidesBanner {
+	display: none;
+}
+
+.announcements { /*NEED WORK IF WE SHOULD DO A SLOGAN*/
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: 70%;
+}
+
+.announcements img { /*NEED WORK IF WE SHOULD DO A SLOGAN*/
+    object-fit:cover; 
+    width:100%; 
+    height: 400px;
+}
+
+#previous, 
+#next {
+	cursor: pointer;
+	position: absolute;
+	top: 265px;
+	width: 50px;
+    height: 50px;
+	padding-top: 10px;
+    padding-left: 17px;
+	margin-top: -22px;
+    margin-left: 2%;
+	color: var(--secondary-color);
+	font-weight: bold;
+	font-size: 18px;
+    border: solid 2px var(--secondary-color);
+	border-radius: 50%;
+	user-select: none;
+}
+
+#next {
+	right: 0;
+    margin-right: 2%;
+	padding-left: 19px;
+}
+
+/*
+#previous:hover, 
+#next:hover {
+	border-color: var(--secondary-color);
+    color: var(--secondary-color);
+} */
+
+.dot-Container {
+    position: relative;
+    top: -30px;
+}
+
+.dotSlide {
+   cursor: pointer;
+   height: 15px; 
+   width: 15px; 
+   margin: 0 2px; 
+   border: solid 1.5px var(--secondary-color);
+   border-radius: 50%;
+   display: inline-block; 
+   transition: background-color 0.3s ease;
+}
+
+.dotSlide:hover {
+    background-color: var(--accent-third-color);
+}
+
+.activeDot, .activeDot:hover {
+    background-color: var(--accent-secondary-color);
+}
+
+.transition { /*MAYBE DO A DIFFERENT TRANSITION*/
+  vertical-align: middle;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/*Nav Bar*/
+header {
+  opacity: 85%; 
+  position: relative;
+  z-index: 1;
+}
+
+.navBar { /*NEED WORK*/
+  overflow: hidden; 
+  background-color: var(--primary-color);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0 1.8%;
+  
+}
+
+.navBar li,
+.storeName {
+  float: right;
+  display: block;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+.navBar a,
+.storeName {
+  color: var(--accent-primary-color); 
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+}
+/*Make this a link that calls the store*/
+.storeName { /*Maybe add a different logo (back of business card*/
+  font-size: 20px;
+  float: left;
+} 
+
+.navBar a:hover {
+  color: var(--accent-secondary-color);
+}
+
+.navBar a {
+    padding: 100% 30px;
+}
+
+.activePage a {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    margin: 0 10px;
+    color: var(--accent-secondary-color);
+    border-bottom: solid 5px var(--accent-secondary-color);
+}
+
+.activePage:hover a {
+    color: var(--accent-secondary-color);
+}
+
+/*AboutUs tab*/
+#aboutUs {
+    padding: 30px 0px;
+    margin: -24px 30px;
+    margin-bottom: 0px;
+}
+
+.sectionHeader {
+    margin-top: -15px;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    height: 100px;   
+    border-bottom: solid 10px var(--secondary-color);
+}
+
+.information p{
+    text-align: center;
+    padding-top: 40px;
+    font-size: 20px;
+}
+
+#readMoreAbout {
+    position: absolute;
+    text-decoration:  none;
+    color: var(--accent-primary-color);
+    border:solid 1px var(--accent-primary-color);
+    padding: 5px 15px;
+    z-index: 0;
+    top: 780px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#readMoreAbout:hover {
+    color: var(--accent-secondary-color);
+    border:solid 1px var(--accent-secondary-color);
+}
+
+.columns {
+    float: left; 
+    width: 33.33333%;
+    padding: 8px;
+}
+
+.rows::after {
+    content: ""; 
+    display: table; 
+    clear: both;
+}
+
+#colImg1 {
+    object-fit:cover; 
+    width:100%; 
+    height: 220px;
+}
+#colImg2 {
+    object-fit:cover; 
+    width:100%; 
+    height: 240px;
+}
+#colImg3 {
+    object-fit:cover; 
+    width:100%; 
+    height: 260px;
+}
+
+.rows {
+    padding-top: 100px;
+}
+
+.aboutHeader {
+    background-color: var(--accent-third-color);
+    font-size: 20px;
+    padding: 7px;
+    padding-bottom: 0px;
+}
+
+.columns p {
+    background-color: var(--accent-third-color);
+    padding: 7px;
+}
+
+/*Services tab*/
+.service-wrapper {
+    opacity: 100%;
+}
+
+#serviceSection {
+    padding: 0px 20px;
+    position: relative;
+}
+
+#serviceSection .information p {
+    padding-top: 20px;
+}
+
+#readMoreService {
+    position: absolute;
+    text-decoration:  none;
+    color: var(--accent-primary-color);
+    border:solid 1px var(--accent-primary-color);
+    padding: 5px 15px;
+    z-index: 0;
+    top: 230px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#readMoreService:hover {
+    color: var(--accent-secondary-color);
+    border:solid 1px var(--accent-secondary-color);
+}
+
+
+
+
+
